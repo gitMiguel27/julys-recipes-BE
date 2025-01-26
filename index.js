@@ -1,0 +1,24 @@
+require('dotenv').config()
+const port = process.env.PORT || 3000
+const cors = require('cors')
+const express = require('express')
+const app = express()
+
+app.use(cors())
+app.use(express.urlencoded({ extended: true }))
+app.use(express.json())
+
+// Routes
+app.get('/', (req, res) => {
+    res.send('Hello Backend')
+})
+
+// Catch ALL route
+app.get('*', (req, res) => {
+    res.send('Invalid Route: 404')
+})
+
+//Listener
+app.listen(port, () => {
+    console.log(`Listening on port: ${port}...`)
+})
