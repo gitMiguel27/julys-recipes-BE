@@ -3,6 +3,7 @@ const port = process.env.PORT || 3000
 const cors = require('cors')
 const express = require('express')
 const connectDB = require('./config/db')
+const recipeRoutes = require('./routes/recipeRoutes')
 
 const app = express()
 
@@ -16,6 +17,8 @@ app.use(express.json())
 app.get('/', (req, res) => {
     res.send('Hello Backend')
 })
+
+app.use('/api/recipes', recipeRoutes)
 
 // Catch ALL route
 app.get('*', (req, res) => {
