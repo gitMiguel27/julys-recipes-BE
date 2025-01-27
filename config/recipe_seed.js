@@ -1,0 +1,7 @@
+const starterRecipes = [
+    { title: 'Arroz con Pollo', ingredients: ['chicken breast and legs', 'cumin', 'aji amarillo', 'aji panca', 'apple cider vinegar', 'black beer', 'cayenne', 'olive oil', 'cilantro', 'garlic', 'red onion', 'frozen peas and carrots', 'goya caldo de pollo', 'sazon goya de culantro achiote', 'white jasmine rice', 'red pepper'], instructions: 'Season chicken w salt, pepper, cumin, lemon drops, aji amarillo and aji panca, a little bit of vinegar, a little bit of black beer modelo (and pinch cayenne for some heat) and sear in good amount of oil' },
+    { title: 'Alitas Picantes', ingredients: ['chicken wings', 'garlic', 'red onion', 'olive oil', 'aji panca', 'paprika', 'cumin', 'hot sauce', 'thyme', 'oregano', 'apple cider vinegar'], instructions: 'prepare and wash wings first!' },
+    { title: 'Papa a la Huancaina', ingredients: ['golden potatoes', 'aji amarillo', 'olive oil', 'soda crackers', 'small queso blanco', 'egg'], instructions: 'boil potatoes and egg. fry aji amarillo in oil. blend everything together with a small piece of the cooked potato. Season sauce to taste with salt and pepper. Cut potatoes into large pieces and pour sauce over to serve.' },
+]
+
+module.exports = starterRecipes
