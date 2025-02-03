@@ -21,15 +21,6 @@ router.post('/', async (req, res) => {
     }
 })
 
-// router.get('/:id', async (req, res) => {
-//     try {
-//         let singleRecipe = await Recipe.findById(req.params.id)
-//         res.json(singleRecipe)
-//     } catch (error) {
-//         res.status(500).json({ error: error.message })
-//     }
-// })
-
 router.put('/:id', async (req, res) => {
     try {
         let updatedRecipe = await Recipe.findByIdAndUpdate(req.params.id, req.body, { new: true, })
