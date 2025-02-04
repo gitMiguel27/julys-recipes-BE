@@ -3,7 +3,7 @@ const port = process.env.PORT || 3000
 const cors = require('cors')
 const express = require('express')
 const connectDB = require('./config/db')
-// Recipe routes, seeds, and model
+
 const recipeRoutes = require('./routes/recipeRoutes')
 const Recipe = require('./models/recipeSchema')
 const starterRecipes = require('./config/recipe_seed')
@@ -16,7 +16,6 @@ app.use(cors())
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
-// Routes
 app.get('/', (req, res) => {
     res.send('Hello Backend')
 })
@@ -37,12 +36,10 @@ app.get('/api/seed', async (req, res) => {
     }
 })
 
-// Catch ALL route
 app.get('*', (req, res) => {
     res.send('Invalid Route: 404')
 })
 
-//Listener
 app.listen(port, () => {
     console.log(`Listening on port: ${port}...`)
 })
